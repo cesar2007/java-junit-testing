@@ -71,7 +71,6 @@ Mockito is used to:
    ```bash
    cd your-repo-name
 
-
 # 4. Instructions
 
 ## 4.1 Functional Requirements
@@ -88,6 +87,8 @@ Mockito is used to:
 # 7. Resources
 
 ## Official Language/Framework/Library Documentation
+* [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
+
 ## Main concepts (Databases, Object Oriented Programming, Classes, Polymorphism, etc)
 ## Blog articles, samples
 ## Public repositories
