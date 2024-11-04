@@ -1,4 +1,4 @@
-# Title
+# JUnit 5 and Mockito in Java 21 🚀
 
 # 1. Overview
 This repository contains practical examples of unit testing using JUnit 5 and Mockito in a Java 21 environment. Through various test cases, it demonstrates how to integrate JUnit to validate business logic and how to use Mockito to create mocks and perform isolated dependency testing.
@@ -59,6 +59,18 @@ Mockito is used to:
 - **Git**: manage repository
 
 # 3. Build Instructions
+1. **Clone the Repository**
+
+   Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+
+2. **Navigate to the Project Directory**
+
+   ```bash
+   cd your-repo-name
+
 
 # 4. Instructions
 
