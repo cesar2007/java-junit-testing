@@ -92,4 +92,6 @@ Mockito is used to:
 ## Main concepts (Databases, Object Oriented Programming, Classes, Polymorphism, etc)
 ## Blog articles, samples
 ## Public repositories
+* [JUnit 5 starter configuration](https://github.com/junit-team/junit5-samples)
+  
 ## Video tutorials
