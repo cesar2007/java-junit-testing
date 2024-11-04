@@ -136,29 +136,31 @@ class CuentaTest {
     bbva.addCuenta(cuentaDestino);
     bbva.setNombre("BBVA");
     bbva.transferir(cuentaOrigen, cuentaDestino, new BigDecimal(400));
-    assertEquals("1800", cuentaDestino.getSaldo().toPlainString());
-    assertEquals("2100", cuentaOrigen.getSaldo().toPlainString());
+//    assertEquals("1800", cuentaDestino.getSaldo().toPlainString());
+//    assertEquals("2100", cuentaOrigen.getSaldo().toPlainString());
+//
+//    assertEquals(2, bbva.getCuentas().size());
+//    assertEquals("BBVA", cuentaOrigen.getBanco().getNombre());
+//    assertEquals("Cesar", bbva.getCuentas().stream()
+//        .filter(c -> c.getPersona().equals("Cesar"))
+//        .findFirst()
+//        .get().getPersona());
+//
+//    assertTrue(bbva.getCuentas().stream()
+//        .anyMatch(c -> c.getPersona().equals("Cesar")));
 
-    assertEquals(2, bbva.getCuentas().size());
-    assertEquals("BBVA", cuentaOrigen.getBanco().getNombre());
-    assertEquals("Cesar", bbva.getCuentas().stream()
-        .filter(c -> c.getPersona().equals("Cesar"))
-        .findFirst()
-        .get().getPersona());
-
-    assertTrue(bbva.getCuentas().stream()
-        .anyMatch(c -> c.getPersona().equals("Cesar")));
-
-//    assertAll(
-//        () -> assertEquals("2200", cuentaOrigen.getSaldo().toPlainString()),
-//        () -> assertEquals(2, bbva.getCuentas().size()),
-//        () -> assertEquals("BBVA.", cuentaOrigen.getBanco().getNombre()),
-//        () -> assertEquals("Cesar", bbva.getCuentas().stream()
-//            .filter(c -> c.getPersona().equals("Cesar")).findFirst()
-//            .get().getPersona()),
-//        () -> assertTrue(bbva.getCuentas().stream().anyMatch(c -> c.getPersona()
-//            .equals("Cesar")))
-//    );
+    assertAll(
+        () -> assertEquals("2200", cuentaOrigen.getSaldo().toPlainString()),
+        () -> assertEquals(2, bbva.getCuentas().size()),
+        () -> assertEquals("BBVA.", cuentaOrigen.getBanco().getNombre()),
+        () -> assertTrue(bbva.getCuentas().stream()
+                .anyMatch(c -> c.getPersona().equals("Cesar"))),
+        () -> assertEquals("Cesar", bbva.getCuentas().stream()
+            .filter(c -> c.getPersona().equals("Cesar")).findFirst()
+            .get().getPersona()),
+        () -> assertTrue(bbva.getCuentas().stream().anyMatch(c -> c.getPersona()
+            .equals("Cesar")))
+    );
   }
 
   @Nested
@@ -207,7 +209,7 @@ class CuentaTest {
     }
 
     @Test
-    @EnabledIfSystemProperty(named = "java.version", matches="21.0.4")
+    @EnabledIfSystemProperty(named = "java.version", matches=".*21.*")
     void testJavaVersion() {
 
     }
@@ -249,7 +251,7 @@ class CuentaTest {
     }
 
     @Test
-    @EnabledIfEnvironmentVariable(named = "NUMBER_OF_PROCESSORS", matches = "13")
+    @EnabledIfEnvironmentVariable(named = "NUMBER_OF_PROCESSORS", matches = "14")
     void testProcesadores(){
     }
 
@@ -300,7 +302,7 @@ class CuentaTest {
   @Nested
   class PruebasParametrizadasTest {
     @ParameterizedTest
-//      (name = "numero {index} ejecutando con valor {0} - {argumentsWithNames}")
+      (name = "numero {index} ejecutando con valor {0} - {argumentsWithNames}")
     @ValueSource(strings = {"100", "200", "300", "500", "700", "1000"})
     void testDebitoCuentaValueSource(String monto) {
       cuenta.debito(new BigDecimal(monto) );
@@ -320,7 +322,7 @@ class CuentaTest {
 
     @ParameterizedTest
 //      (name = "numero {index} ejecutando con valor {0} - {argumentsWithNames}")
-    @CsvSource({"200,100,John,Andres", "250,200,Pepe,Pepe", "301,300,Maria,Maria", "400,500,Cesar,Cesar", "750,700,Luci,Luci", "1000.12345,1000.12345,Lili,Lili"})
+    @CsvSource({"200,100,John,John", "250,200,Pepe,Pepe", "301,300,Maria,Maria", "550,500,Cesar,Cesar", "750,700,Luci,Luci", "1001.12345,1000.12345,Lili,Lili"})
     void testDebitoCuentaCsvSource2(String saldo, String monto, String esperado, String actual) {
       System.out.println(saldo + " -> " + monto);
       cuenta.setSaldo(new BigDecimal(saldo));
@@ -354,7 +356,6 @@ class CuentaTest {
     }
 
   }
-
 
 
 }

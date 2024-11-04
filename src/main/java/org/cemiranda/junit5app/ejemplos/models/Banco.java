@@ -6,12 +6,12 @@ import java.util.List;
 
 public class Banco {
 
+  private List<Cuenta> cuentas;
+  private String nombre;
+
   public Banco() {
     cuentas = new ArrayList<>();
   }
-
-  private List<Cuenta> cuentas;
-  private String nombre;
 
   public List<Cuenta> getCuentas() {
     return cuentas;

@@ -28,7 +28,7 @@ class ExamenServiceImplTest {
     // se indica que cuando se llame a findAll() en el mock, se devuelven los datos definidos
     when(repository.findAll()).thenReturn(datos);
 
-    // se ejecuta la prueba buscar un examenp or nombre
+    // se ejecuta la prueba buscar un examen o nombre
     Examen examen = service.findExamenPorNombre("Matemáticas");
 
     assertNotNull(examen);
