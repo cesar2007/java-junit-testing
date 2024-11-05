@@ -52,11 +52,11 @@ Mockito is used to:
 
 
 # 2. Environment Prerequisites
-- **Java**: 21 or superior
+~~- **Java**: 21 or superior
 - **JUnit**: 5.x
 - **Mockito**: 4.x or superior
 - **Maven** o **Gradle** (optional por dependency management)
-- **Git**: manage repository
+- **Git**: manage repository~~
 
 # 3. Build Instructions
 1. **Clone the Repository**
@@ -64,17 +64,18 @@ Mockito is used to:
    Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/cesar2007/java-junit-testing
 
 2. **Navigate to the Project Directory**
 
    ```bash
-   cd your-repo-name
-
+   cd java-junit-testing
 
 # 4. Instructions
 
 ## 4.1 Functional Requirements
+
+
 ## 4.2 Business Rules
 ## 4.3 Technical Requirements
 
