@@ -50,6 +50,20 @@ Mockito is used to:
 
 ---
 
+## IntelliJ and JUnit
+IntelliJ IDEA offers powerful integration with JUnit, making it an ideal environment for writing, running, and debugging unit tests. Key benefits include:
+
+- **Automatic Test Recognition**: IntelliJ automatically detects JUnit test classes and methods, allowing for easy test execution with a right-click.
+- **Test Code Generation**: Quickly generate test classes and assertions, reducing setup time.
+- **Detailed Test Output**: See results for passed, failed, and ignored tests, with direct links to failures in code.
+- **Advanced Debugging**: Set breakpoints in test methods to examine code behavior in real-time.
+- **Integration with Build Tools**: Works seamlessly with Maven and Gradle for managing dependencies and consistent builds.
+- **Version Control Support**: Integrated Git support helps track and sync test code changes across teams.
+
+IntelliJ’s JUnit integration simplifies testing and debugging, making it easier to maintain high-quality code in Java projects.
+
+---
+
 # 2. Environment Prerequisites
 - **Java**: 21 or superior
 - **JUnit**: 5.x
@@ -123,5 +137,3 @@ Unit Testing, JUnit5, Mockito
 
 ## Public repositories
 * [JUnit 5 starter configuration by JUnit Team](https://github.com/junit-team/junit5-samples)
-  
-## Video tutorials
