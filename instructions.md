@@ -50,13 +50,12 @@ Mockito is used to:
 
 ---
 
-
 # 2. Environment Prerequisites
-~~- **Java**: 21 or superior
+- **Java**: 21 or superior
 - **JUnit**: 5.x
 - **Mockito**: 4.x or superior
 - **Maven** o **Gradle** (optional por dependency management)
-- **Git**: manage repository~~
+- **Git**: manage repository
 
 # 3. Build Instructions
 1. **Clone the Repository**
@@ -74,22 +73,55 @@ Mockito is used to:
 # 4. Instructions
 
 ## 4.1 Functional Requirements
+* Conduct transfers with validations:
+  * Validate that the source account has enough funds before performing a transfer.
+  * Ensure that transfers cannot be made with a negative or zero amount.
+  * Withdraw funds with validations:
 
+* Ensure withdrawals cannot exceed the available balance.
+  * Allow a maximum withdrawal limit (e.g., $1000).
+
+* Check transaction history:
+  * Enable users to view a history of all completed transactions (deposits, withdrawals, and transfers).
 
 ## 4.2 Business Rules
+* Transfers should fail if the source account lacks sufficient funds.
+* Withdrawals should not exceed the account balance or the maximum limit.
+* Each transaction should be recorded in a transaction history.
+
 ## 4.3 Technical Requirements
+* Add a Transaction class to represent each transaction (type, amount, date, etc.).
+* Update the Account class to include a transaction history.
+* Implement methods in the Account class to handle withdrawal and transfer validations
 
 # 5. Testing and Validation Requisites
+* Unit tests should be written for each new method in the Account class, including:
+  * Verification of sufficient funds for transfers.
+  * Validation of withdrawals that exceed the balance or maximum limit.
+  * Verification of transaction history after each operation.
 
 # 6. Acceptance Criteria
-
 ## 6.1 Evaluation criteria
+* Functionality: All new functions must be implemented and functional as defined.
+* Code Quality: Code should adhere to best programming practices.
+* Testing: At least 90% test coverage is required.
+
 ## 6.2 Expected documentation and deliverables
+* Source Code: GitHub repository with the implemented code.
+* Documentation: A README.md file explaining how to run the project and execute unit tests.
+* Test Results: Report showing unit test results and coverage.
 
 # 7. Resources
-
 ## Official Language/Framework/Library Documentation
-## Main concepts (Databases, Object Oriented Programming, Classes, Polymorphism, etc)
+* [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
+
+## Main concepts 
+Unit Testing, JUnit5, Mockito
+
 ## Blog articles, samples
+* [JUnit Series by Baeldung](https://www.baeldung.com/junit)
+
 ## Public repositories
+* [JUnit 5 starter configuration by JUnit Team](https://github.com/junit-team/junit5-samples)
+  
 ## Video tutorials
