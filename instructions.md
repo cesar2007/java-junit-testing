@@ -85,40 +85,43 @@ IntelliJ’s JUnit integration simplifies testing and debugging, making it easie
    cd java-junit-testing
 
 # 4. Instructions
+In this exercise, you will be implementing a banking system that allows users to manage their accounts and perform fund transfers. This simulation mimics the functionalities found in real-world banking applications, emphasizing the importance of validation, error handling, and transaction logging.
+
+As users perform transactions, it is crucial to ensure that various business rules are adhered to, such as preventing self-transfers and enforcing transfer limits. Additionally, maintaining a transaction history not only enhances user experience but also aids in auditing and tracking account activities.
+
+You will implement unit tests to validate that your application behaves correctly under various scenarios. These tests will ensure that all business rules are enforced and that the system handles exceptional cases gracefully.
+
+Your task will involve enhancing the existing account management functionality with new rules, logging mechanisms, and testing protocols. By the end of this exercise, you will have a robust banking application capable of managing accounts and processing transactions while adhering to defined business rules.
 
 ## 4.1 Functional Requirements
-* Conduct transfers with validations:
-  * Validate that the source account has enough funds before performing a transfer.
-  * Ensure that transfers cannot be made with a negative or zero amount.
-  * Withdraw funds with validations:
-
-* Ensure withdrawals cannot exceed the available balance.
-  * Allow a maximum withdrawal limit (e.g., $1000).
-
-* Check transaction history:
-  * Enable users to view a history of all completed transactions (deposits, withdrawals, and transfers).
+1. **Transfer to the Same Account**: Implement a validation that prevents a user from transferring funds to their own account, generating a custom exception `SelfTransferException`.
+2. **Transfer Amount Limits**: Introduce a rule that limits the maximum amount that can be transferred in a single transaction (e.g., a maximum of $1000). If the transfer amount exceeds this limit, an exception `TransferLimitExceededException` should be thrown.
+3. **Transfer Between Accounts**: Allow transfers between different accounts, verifying that both accounts exist in the system.
+4. **Transaction History**: Record each transaction in the `Account` class, including details such as amount, date, transaction type, and for transfers, the identity of the account holder.
 
 ## 4.2 Business Rules
-* Transfers should fail if the source account lacks sufficient funds.
-* Withdrawals should not exceed the account balance or the maximum limit.
-* Each transaction should be recorded in a transaction history.
+- **Prohibition of Transfers to the Same Account**: If the source account is the same as the destination account, a `SelfTransferException` must be thrown.
+- **Transfer Amount Limits**: Transfers must not exceed a specified limit (e.g., $1000). If the limit is exceeded, `TransferLimitExceededException` should be thrown.
+- **Transaction Logging**: All transactions (transfers) must be logged in the account history for auditing purposes.
 
 ## 4.3 Technical Requirements
-* Add a Transaction class to represent each transaction (type, amount, date, etc.).
-* Update the Account class to include a transaction history.
-* Implement methods in the Account class to handle withdrawal and transfer validations
+- Add a Transaction class to represent each transaction (type, amount, date, etc.).
+- Update the Account class to include a transaction history.
+- Add methods to throw the exceptions `SelfTransferException` and `TransferLimitExceededException` where appropriate.
+- Implement a method `getTransactionHistory()` in `Account` that returns the transaction history.
+- Use `assertAll` and other JUnit validations to verify multiple conditions in tests.
 
 # 5. Testing and Validation Requisites
-* Unit tests should be written for each new method in the Account class, including:
-  * Verification of sufficient funds for transfers.
-  * Validation of withdrawals that exceed the balance or maximum limit.
-  * Verification of transaction history after each operation.
+* Tests required to validate that:
+  - Transfers to the same account generate the `SelfTransferException`.
+  - Transfers that exceed the maximum limit generate the `TransferLimitExceededException`.
+  - Each transfer is logged in the account history, including details about the transaction.
 
 # 6. Acceptance Criteria
 ## 6.1 Evaluation criteria
-* Functionality: All new functions must be implemented and functional as defined.
-* Code Quality: Code should adhere to best programming practices.
-* Testing: At least 90% test coverage is required.
+- All tests must pass on the first execution.
+- The validations for transfers to the same account and transfer amount limits must function correctly in all test cases.
+- The test coverage must include the new workflow for account transfers, ensuring exceptions are managed appropriately.
 
 ## 6.2 Expected documentation and deliverables
 * Source Code: GitHub repository with the implemented code.
