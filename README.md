@@ -8,4 +8,4 @@ The goal is to show how these tools facilitate test-driven development (TDD) in 
 
 ---
 
-Instructions [link](./instructions.md) 
+ [Instructions](./instructions.md) 
