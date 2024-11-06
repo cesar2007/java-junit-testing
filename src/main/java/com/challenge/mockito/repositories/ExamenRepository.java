@@ -1,6 +1,6 @@
-package org.cemiranda.mockito.ejemplos.repositories;
+package com.challenge.mockito.repositories;
 
-import org.cemiranda.mockito.ejemplos.models.Examen;
+import com.challenge.mockito.models.Examen;
 
 import java.util.List;
 

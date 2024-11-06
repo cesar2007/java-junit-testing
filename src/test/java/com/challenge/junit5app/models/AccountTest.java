@@ -1,6 +1,8 @@
-package org.cemiranda.junit5app.ejemplos.models;
+package com.challenge.junit5app.models;
 
-import org.cemiranda.junit5app.ejemplos.exceptions.InsufficientFundsException;
+import com.challenge.junit5app.exceptions.InsufficientFundsException;
+import com.challenge.junit5app.models.Account;
+import com.challenge.junit5app.models.Bank;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
 import org.junit.jupiter.params.ParameterizedTest;

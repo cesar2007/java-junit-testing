@@ -1,4 +1,4 @@
-package org.cemiranda.junit5app.ejemplos.models;
+package com.challenge.junit5app.models;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

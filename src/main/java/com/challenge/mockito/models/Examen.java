@@ -1,4 +1,4 @@
-package org.cemiranda.mockito.ejemplos.models;
+package com.challenge.mockito.models;
 
 import java.util.ArrayList;
 import java.util.List;

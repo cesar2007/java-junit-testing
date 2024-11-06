@@ -1,4 +1,4 @@
-package org.cemiranda.junit5app.ejemplos.exceptions;
+package com.challenge.junit5app.exceptions;
 
 public class InsufficientFundsException extends RuntimeException{
 

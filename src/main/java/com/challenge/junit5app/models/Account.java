@@ -1,6 +1,6 @@
-package org.cemiranda.junit5app.ejemplos.models;
+package com.challenge.junit5app.models;
 
-import org.cemiranda.junit5app.ejemplos.exceptions.InsufficientFundsException;
+import com.challenge.junit5app.exceptions.InsufficientFundsException;
 
 import java.math.BigDecimal;
 

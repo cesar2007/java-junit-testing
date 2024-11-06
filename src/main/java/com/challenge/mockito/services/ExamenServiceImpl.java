@@ -1,7 +1,7 @@
-package org.cemiranda.mockito.ejemplos.services;
+package com.challenge.mockito.services;
 
-import org.cemiranda.mockito.ejemplos.models.Examen;
-import org.cemiranda.mockito.ejemplos.repositories.ExamenRepository;
+import com.challenge.mockito.models.Examen;
+import com.challenge.mockito.repositories.ExamenRepository;
 
 import java.util.Optional;
 

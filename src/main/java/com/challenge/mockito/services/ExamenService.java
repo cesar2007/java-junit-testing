@@ -1,6 +1,6 @@
-package org.cemiranda.mockito.ejemplos.services;
+package com.challenge.mockito.services;
 
-import org.cemiranda.mockito.ejemplos.models.Examen;
+import com.challenge.mockito.models.Examen;
 
 public interface ExamenService {
   Examen findExamenPorNombre(String nombre) throws InterruptedException;
