@@ -1,14 +1,14 @@
 package com.challenge.mockito.repositories;
 
 
-import com.challenge.mockito.models.Examen;
+import com.challenge.mockito.models.Exam;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class ExamenRepositoryOtro implements ExamenRepository{
+public class ExamRepositoryOther implements ExamRepository {
   @Override
-  public List<Examen> findAll() throws InterruptedException {
+  public List<Exam> findAll() throws InterruptedException {
     try {
       TimeUnit.SECONDS.sleep(5);
     } catch(InterruptedException e) {

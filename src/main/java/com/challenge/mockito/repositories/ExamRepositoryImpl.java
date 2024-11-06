@@ -1,13 +1,13 @@
 package com.challenge.mockito.repositories;
 
-import com.challenge.mockito.models.Examen;
+import com.challenge.mockito.models.Exam;
 
 import java.util.Collections;
 import java.util.List;
 
-public class ExamenRepositoryImpl implements ExamenRepository{
+public class ExamRepositoryImpl implements ExamRepository {
   @Override
-  public List<Examen> findAll() {
+  public List<Exam> findAll() {
     return
         Collections.emptyList();
         /**/
