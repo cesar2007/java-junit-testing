@@ -19,11 +19,11 @@ public class ExamServiceImpl implements ExamService {
   }
 
   @Override
-  public Optional<Exam> findExamByName(String nombre) {
+  public Optional<Exam> findExamByName(String name) {
       try {
           return examRepository.findAll()
               .stream()
-              .filter(e -> e.getName().contains(nombre))
+              .filter(e -> e.getName().contains(name))
               .findFirst();
       } catch (InterruptedException e) {
           throw new RuntimeException(e);

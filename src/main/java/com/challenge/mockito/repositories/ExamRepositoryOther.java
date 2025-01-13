@@ -14,7 +14,6 @@ public class ExamRepositoryOther implements ExamRepository {
     } catch(InterruptedException e) {
       e.printStackTrace();
     }
-
     return null;
   }
 }
