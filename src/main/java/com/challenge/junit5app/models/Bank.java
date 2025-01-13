@@ -30,8 +30,8 @@ public class Bank {
     this.name = name;
   }
 
-  public void transfer (Account origin, Account destination, BigDecimal ammount){
-    origin.debit(ammount);
-    destination.credit(ammount);
+  public void transfer (Account origin, Account destination, BigDecimal amount){
+    origin.debit(amount);
+    destination.credit(amount);
   }
 }

@@ -29,7 +29,6 @@ class ExamServiceImplTest {
   @InjectMocks
   ExamServiceImpl service;
 
-
   @Test
   void findExamByName() throws InterruptedException {
     when(repository.findAll()).thenReturn(ExamData.EXAMS);
@@ -38,7 +37,6 @@ class ExamServiceImplTest {
     assertTrue(exam.isPresent());
     assertEquals(5L, exam.orElseThrow().getId());
     assertEquals( "Math", exam.orElseThrow().getName());
-
   }
 
   @Test
