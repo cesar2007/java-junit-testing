@@ -68,7 +68,7 @@ IntelliJ’s JUnit integration simplifies testing and debugging, making it easie
 - **Java**: 21 or superior
 - **JUnit**: 5.x
 - **Mockito**: 4.x or superior
-- **Maven** o **Gradle** (optional por dependency management)
+- **Maven** o **Gradle** (optional for dependency management)
 - **Git**: manage repository
 
 # 3. Build Instructions

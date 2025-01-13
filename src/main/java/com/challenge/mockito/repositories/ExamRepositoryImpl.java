@@ -8,8 +8,6 @@ import java.util.List;
 public class ExamRepositoryImpl implements ExamRepository {
   @Override
   public List<Exam> findAll() {
-    return
-        Collections.emptyList();
-        /**/
+    return Collections.emptyList();
   }
 }

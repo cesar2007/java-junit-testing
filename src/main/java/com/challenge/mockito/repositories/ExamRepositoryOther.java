@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ExamRepositoryOther implements ExamRepository {
   @Override
-  public List<Exam> findAll() throws InterruptedException {
+  public List<Exam> findAll() {
     try {
       TimeUnit.SECONDS.sleep(5);
     } catch(InterruptedException e) {

@@ -20,7 +20,6 @@ import java.util.Properties;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.*;
 
-//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class AccountTest {
 
   Account account;
@@ -218,8 +217,8 @@ class AccountTest {
   class EnvironmentVariableTest {
     @Test
     void printEnvironmentVariables() {
-      Map<String, String> getenv = System.getenv();
-      getenv.forEach((k, v) -> System.out.println(k + " = " + v));
+      Map<String, String> getEnv = System.getenv();
+      getEnv.forEach((k, v) -> System.out.println(k + " = " + v));
     }
 
     @Test

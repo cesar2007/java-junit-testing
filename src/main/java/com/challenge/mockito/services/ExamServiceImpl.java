@@ -13,10 +13,10 @@ public class ExamServiceImpl implements ExamService {
   }
 
   @Override
-  public Exam findExamByName(String nombre) throws InterruptedException {
+  public Exam findExamByName(String name) throws InterruptedException {
     Optional<Exam> examOptional = examRepository.findAll()
         .stream()
-        .filter(e -> e.getName().contains(nombre))
+        .filter(e -> e.getName().contains(name))
         .findFirst();
     Exam exam = null;
     if(examOptional.isPresent()) {

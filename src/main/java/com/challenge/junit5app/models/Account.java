@@ -52,10 +52,9 @@ public class Account {
 
   @Override
   public boolean equals(Object obj) {
-    if (!(obj instanceof Account)) {
+    if (!(obj instanceof Account a)) {
       return false;
     }
-    Account a = (Account) obj;
     if (this.person == null || this.balance == null) {
       return false;
     }

@@ -17,10 +17,6 @@ public class Bank {
     return accounts;
   }
 
-  public void setAccounts(List<Account> accounts) {
-    this.accounts = accounts;
-  }
-
   public void addAccount(Account account) {
     accounts.add(account);
     account.setBank(this);
