@@ -22,4 +22,11 @@ public class Exam {
     return name;
   }
 
+  public List<String> getQuestions() {
+    return questions;
+  }
+
+  public void setQuestions(List<String> questions) {
+    this.questions = questions;
+  }
 }
